@@ -19,6 +19,13 @@ public class Departement {
     public List<Service> getServices() {
         return this.services;
     }
+    public List<Employe> getDirecteursServices() {
+        List<Employe> directeurs = new java.util.ArrayList<>();
+        for (Service s : services) {
+            directeurs.addAll(s.getDirecteursEquipes());
+        }
+        return directeurs;
+    }
 
 
 }

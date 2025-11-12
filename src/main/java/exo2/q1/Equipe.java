@@ -25,6 +25,11 @@ public class Equipe {
     public List<Employe> getEmployes() {
         return this.employes;
     }
+    
+    public Employe getDirecteurEquipe() {
+        return directeur;
+    }
+
 
     
 }

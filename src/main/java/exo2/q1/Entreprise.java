@@ -20,7 +20,7 @@ public class Entreprise {
         return this.departements;
     }
 
-    public List<Employe> listeDirecteursDepartement() {
+    /*public List<Employe> listeDirecteursDepartement() {
         ArrayList<Employe> directeurs = new ArrayList<>();
         for (Departement d : departements) {
             for (Service s : d.getServices()) {
@@ -30,6 +30,15 @@ public class Entreprise {
             }
         }
         return directeurs;
+    }*/
+    
+    public List<Employe> listeDirecteursDepartement() {
+        List<Employe> directeurs = new java.util.ArrayList<>();
+        for (Departement d : departements) {
+            directeurs.addAll(d.getDirecteursServices());
+        }
+        return directeurs;
     }
+
 
 }

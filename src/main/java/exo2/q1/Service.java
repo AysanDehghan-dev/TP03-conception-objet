@@ -19,5 +19,14 @@ public class Service {
     public List<Equipe> getEquipes() {
         return this.equipes;
     }
+    
+    public List<Employe> getDirecteursEquipes() {
+        List<Employe> directeurs = new java.util.ArrayList<>();
+        for (Equipe e : equipes) {
+            directeurs.add(e.getDirecteurEquipe());
+        }
+        return directeurs;
+    }
+
 
 }
